@@ -79,6 +79,18 @@ post_max_size = 50M
 max_execution_time = 300
 date.timezone = Asia/Dhaka
 ```
+```sh
+sudo apt install php8.4-fpm
+
+Apache-এ FPM enable
+
+sudo a2enmod proxy_fcgi setenvif
+sudo a2enconf php8.4-fpm
+
+sudo systemctl restart php8.4-fpm
+sudo systemctl restart apache2
+
+```
 
 Restart PHP-FPM (if used):
 
