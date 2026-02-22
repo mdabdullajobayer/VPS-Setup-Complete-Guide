@@ -1,6 +1,23 @@
 ### VPS
 
 ```bash
+react app pm2
+ecosystem.config.cjs
+module.exports = {
+  apps: [
+    {
+      name: 'genters-admin',
+      script: 'npm',
+      args: 'run preview -- --port 4000',
+      cwd: '/var/www/Genters-Admin-Frontend',
+      instances: 1,
+      exec_mode: 'fork'
+    }
+  ]
+};
+```
+
+```bash
 node -v
 npm -v
 pm2 -v
